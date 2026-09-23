@@ -89,3 +89,29 @@ print(f"{ph_ok=} and {temperature_ok=}")
 
 if ph_ok and temperature_ok:
     print("Everything is okay :)")
+
+class Bioreactor:
+    def __init__(selfself, process_name, ph_lims, ph_chg, temp_lims, "temp_chg"):
+        self.process_name=process_name
+        self.ph_min=ph_lims[0]
+        self.ph_max=ph_lims[1]
+        self.ph_chg=ph_chg
+        self.temp_min=temp_lims[0]
+        self.temp_max=temp_lims[1]
+        self.temp_chg=temp_chg
+
+        #PH_MIN=6.5
+        #PH_MAX=7.5
+        #PH_CHANGE=0.1
+        #TEMP_MIN=36
+        #TEMP_MAX=38
+        #TEMP_CHANGE=0.1
+
+    def in_optimal_range(self, ph, temperature):
+        ph_ok=(self.ph_min<=ph<=self.ph_max)
+        temperature_ok=(TEMP_MIN<=temperature<=TEMP_MAX)
+        process_ok=(ph_ok and temperature_ok)
+
+    def simulate_process(selfself, initial_ph, initial_temp):
+        ph=initial_ph
+        temperature=initial_temp
